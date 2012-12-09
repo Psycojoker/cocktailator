@@ -1,0 +1,12 @@
+-for cocktail in cocktails
+  %h5= cocktail.name
+    %small= cocktail.method
+  %ul
+    -for ingredient in cocktail.ingredients
+      %li
+        =ingredient.name
+        ,
+        =ingredient.proportion
+    -if cocktail.comment != "/"
+      %p Commentaire:
+        =cocktail.comment

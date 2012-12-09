@@ -1,0 +1,20 @@
+-extends "base.haml"
+-load coffeescript
+
+-block content
+  #base
+    .six.columns
+      %h3 Ingrédients
+      #filtering.row.collapse
+        .two.columns
+          %span.prefix Filtrer
+        .five.columns
+          %input{type: "text"} 
+        %br
+      #ingredients
+    .six.columns
+      %h3 Cocktails
+      #cocktails
+
+-block javascript
+  %script{type: "text/javascript", src: "{{ STATIC_URL }}{% coffeescript 'home.coffee' %}"}
